@@ -1,38 +1,134 @@
-  body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-        header {
-            background-color: #3498db;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
+header {
+    background-color: #fff;
+    color: #130372;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
 
-        nav {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            padding: 10px;
-            text-align: center;
-        }
+}
 
-        section {
-            padding: 20px;
-        }
+.logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
-        iframe {
-            width: 100%;
-            height: 400px; /* Adjust height as needed */
-        }
+h1{
+    background: #81c0f7;
+}
+nav {
+    background-color: grey;
+    color: #ecf0f1;
+    padding: 10px;
+    text-align: center;
+}
 
-        footer {
-            background-color: #34495e;
-            color: #ecf0f1;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+section {
+    padding: 20px;
+}
+
+.profile-card {
+    width: 300px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.profile-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* score card */
+.score_card{
+    width: 50%;
+}
+
+@property --p{
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 1;
+  }
+  
+  .pie {
+    --p:20;
+    --b:22px;
+    --c:darkred;
+    --w:150px;
+  
+    width: var(--w);
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    margin: 5px;
+    place-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+  .pie:before,
+  .pie:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+  }
+  .pie:before {
+    inset: 0;
+    background:
+      radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+      conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+            mask: radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+  }
+  .pie:after {
+    inset: calc(50% - var(--b)/2);
+    background: var(--c);
+    transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+  }
+  .animate {
+    animation: p 1s .5s both;
+  }
+  .no-round:before {
+    background-size: 0 0, auto;
+  }
+  .no-round:after {
+    content: none;
+  }
+  @keyframes p{
+    from{--p:0}
+  }
+
+iframe {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+}
+
+footer {
+    background-color: #34495e;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
