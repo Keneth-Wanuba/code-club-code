@@ -72,12 +72,15 @@ nav a:hover{
 }
 
 .home{
-  background-image: url(imgs/Logos/IMG_9041.JPG);
+  background-image: url(../imgs/Logos/IMG_9041.JPG);
+  /* background: linear-gradient(45deg, black, transparent); */
   display: flex;
+  background-attachment: fixed;
   width: 100vw;
   height: 70vh;
   justify-content: center;
   align-items: center;
+  background-size: cover;
 }
 
 
