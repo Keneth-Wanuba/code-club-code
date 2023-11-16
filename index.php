@@ -24,7 +24,9 @@
     </header>
     <div class="home">
          <form class="form">
-            <label> Choose School </label>
+            <h1>Generate Student Report</h1>
+            <br><br><br>
+            <label> Choose School: </label>
             <select id="category">
         <?php
         //   $sql="SELECT * from category WHERE school_id='$catID'";
@@ -38,10 +40,10 @@
 
       </select>
             <br><br><br>
-            <label> Enter Student Name </label>
-            <input type="text"></input>
+            <label> Enter Student Name: </label>
+            <input type="text" class="name"></input>
             <br><br><br>
-            <button type="submit" name="submit">Submit</button>
+            <button type="submit" name="submit">Generate</button>
                         
         </form>
     </div>    
