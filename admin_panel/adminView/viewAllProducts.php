@@ -4,7 +4,7 @@
   <table class="table ">
     <thead>
       <tr>
-        <th class="text-center">Student_ID.</th>
+        <th class="text-center">Student_ID</th>
         <th class="text-center">Sdt Name</th>
         <th class="text-center">Sdt Description</th>
         <th class="text-center">School</th>
@@ -24,7 +24,7 @@
       <td><?=$count?></td>
       <td><?=$row["student_name"]?></td>
       <td><?=$row["student_desc"]?></td>      
-      <td><?=$row["school_id"]?></td> 
+      <td><?=$row["school_name"]?></td> 
       <td><?=$row["level"]?></td>
 
       <td><button class="btn btn-primary" style="height:40px" onclick="itemEditForm('<?=$row['student_id']?>')">Edit</button></td>
