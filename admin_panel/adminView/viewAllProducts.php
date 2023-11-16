@@ -38,7 +38,7 @@
   </table>
 
   <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-secondary " style="height:40px" data-toggle="modal" data-target="#myModal">
+  <button type="button" class="btn-secondary " style="height:40px" data-toggle="modal" data-target="#myModal">
     Add Student
   </button>
 
@@ -85,7 +85,7 @@
               </select>
             </div>
             <div class="form-group">
-              <button type="submit" class="btn btn-secondary" id="upload" style="height:40px">Add Student</button>
+              <button type="submit" class="btn-secondary" id="upload" style="height:40px">Add Student</button>
             </div>
           </form>
 

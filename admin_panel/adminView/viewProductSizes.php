@@ -35,7 +35,7 @@
   </table>
 
   <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-secondary" style="height:40px" data-toggle="modal" data-target="#myModal">
+  <button type="button" class="btn-secondary" style="height:40px" data-toggle="modal" data-target="#myModal">
     Add Size Variation
   </button>
 
@@ -91,7 +91,7 @@
               <input type="number" class="form-control" name="qty" required>
             </div>
             <div class="form-group">
-              <button type="submit" class="btn btn-secondary" name="upload" style="height:40px">Add Variation</button>
+              <button type="submit" class="btn-secondary" name="upload" style="height:40px">Add Variation</button>
             </div>
           </form>
 

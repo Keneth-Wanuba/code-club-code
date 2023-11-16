@@ -114,10 +114,10 @@
   }
 
   th {
-    background-color: #584e46;
-    color: #fafafa;
+    background-color: rgb(230, 160, 31);
+    color: rgb(12, 12, 73);
     font-family: 'Open Sans', Sans-serif;
-    font-weight: bold;
+    font-weight: bolder;
   }
 
   tr {
@@ -231,7 +231,7 @@
 
 .btn.btn-signin {
   
-  background-color: #584e46;
+  background-color: rgb(230, 160, 31);
   padding: 2px;
   font-weight: 700;
   font-size: 16px;
@@ -250,6 +250,15 @@
 .btn.btn-signin:active,
 .btn.btn-signin:focus {
   background-color: #a56a39;
+}
+
+.btn-secondary{
+  background-color: rgb(230, 160, 31);
+  border-radius: 5px;
+    height: 40px;
+    padding: 7px;
+    border: none;
+    box-shadow: 0 2px 15px blue;
 }
 
 
