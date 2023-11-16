@@ -29,18 +29,21 @@ require_once "admin_panel/config/dbconnect.php"
             
         </nav>
     </header>
-        <div class="home">
+        <div id="home">
                     
                     <!-- <div>
                     <img class="left" src="imgs/Logos/IMG_9041.JPG" alt="code camp">
             
                     </div> -->
                     
-                    <form>
+                    <form class="form">
                         <label> Choose School </label>
                         <select></select>
+                        <br><br><br>
                         <label> Enter Student Name </label>
                         <input type="text"></input>
+                        <br><br><br>
+                        <button type="submit" name="submit">Submit</button>
                         
                     </form>
                     

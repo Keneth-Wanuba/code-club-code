@@ -81,6 +81,36 @@ nav a:hover{
 }
 
 
+.form{
+  width: 800px;
+  height: 65vh;
+  min-height: 450px;
+  border-radius: 10px;
+  box-shadow:  3px 3px 56px #55bdb8;
+              /*-13px -13px 26px #306b68;*/
+ }
+ 
+ .form input,textarea{
+  border: none;
+  border-radius: 5px;
+  margin-left: 5%;
+  width: 80%;
+  padding: 5px 5%;
+  margin-top: 10px;
+  height: 40px;
+  color: black;
+  background:  #f7f5ec;
+ }
+ .form button{
+  margin: 5%;
+  border: none;
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 5px;
+ 
+ }
+
+
 
 
 
