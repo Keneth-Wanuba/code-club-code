@@ -25,9 +25,28 @@ require_once "admin_panel/config/dbconnect.php"
         <nav class="navigation">
            
                 <li id="current" class="menuitem"><a href="index.html">Home</a></li>
-                <li><a href="student_report.html">Generate Report</a></li>
+                <li><a href="student_report.php">Generate Report</a></li>
             
         </nav>
+    </header>
+        <div class="home">
+                    
+                    <!-- <div>
+                    <img class="left" src="imgs/Logos/IMG_9041.JPG" alt="code camp">
+            
+                    </div> -->
+                    
+                    <form>
+                        <label> Choose School </label>
+                        <select></select>
+                        <label> Enter Student Name </label>
+                        <input type="text"></input>
+                        
+                    </form>
+                    
+            
+            
+        </div>
         
 </body>
 </html>

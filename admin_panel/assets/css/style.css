@@ -319,3 +319,21 @@
   color: #ECDAC9;
   text-decoration: none;
 }
+
+#content img.left{
+	float:left;
+	margin:15px;
+	width: 485px;
+	height: 230px;
+	
+	
+}
+
+
+#content img.right{
+	float:right;
+	margin:15px;
+	width: 450px;
+	height: 230px;
+	
+}

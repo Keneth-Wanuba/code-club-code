@@ -39,24 +39,8 @@
             }
           }
         ?>
-        <?php
-          $sql="SELECT * from category WHERE school_id!='$catID'";
-          $result = $conn-> query($sql);
-          if ($result-> num_rows > 0){
-            while($row = $result-> fetch_assoc()){
-              echo"<option value='". $row['school_id'] ."'>" .$row['school_name'] ."</option>";
-            }
-          }
-        ?>
+
       </select>
-    </div>
-      <div class="form-group">
-         <img width='200px' height='150px' src='<?=$row1["std_image"]?>'>
-         <div>
-            <label for="file">Choose Image:</label>
-            <input type="text" id="existingImage" class="form-control" value="<?=$row1['std_image']?>" hidden>
-            <input type="file" id="newImage" value="">
-         </div>
     </div>
     <div class="form-group">
       <button type="submit" style="height:40px" class="btn btn-primary">Update Student</button>

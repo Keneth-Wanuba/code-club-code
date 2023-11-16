@@ -1,11 +1,10 @@
 
 <div >
-  <h2>Product Items</h2>
+  <h2>Students</h2>
   <table class="table ">
     <thead>
       <tr>
         <th class="text-center">Student_ID.</th>
-        <th class="text-center">Std Image</th>
         <th class="text-center">Sdt Name</th>
         <th class="text-center">Sdt Description</th>
         <th class="text-center">School</th>
@@ -23,7 +22,6 @@
     ?>
     <tr>
       <td><?=$count?></td>
-      <td><img height='100px' src='<?=$row["std_image"]?>'></td>
       <td><?=$row["student_name"]?></td>
       <td><?=$row["student_desc"]?></td>      
       <td><?=$row["school_id"]?></td> 
@@ -85,10 +83,6 @@
                   }
                 ?>
               </select>
-            </div>
-            <div class="form-group">
-                <label for="file">Choose Image:</label>
-                <input type="file" class="form-control-file" id="file">
             </div>
             <div class="form-group">
               <button type="submit" class="btn btn-secondary" id="upload" style="height:40px">Add Student</button>

@@ -139,16 +139,16 @@ function updateItems(){
     var p_desc = $('#p_desc').val();
     var p_price = $('#p_price').val();
     var category = $('#category').val();
-    var existingImage = $('#existingImage').val();
-    var newImage = $('#newImage')[0].files[0];
+    // var existingImage = $('#existingImage').val();
+    // var newImage = $('#newImage')[0].files[0];
     var fd = new FormData();
     fd.append('product_id', product_id);
     fd.append('p_name', p_name);
     fd.append('p_desc', p_desc);
     fd.append('p_price', p_price);
     fd.append('category', category);
-    fd.append('existingImage', existingImage);
-    fd.append('newImage', newImage);
+    // fd.append('existingImage', existingImage);
+    // fd.append('newImage', newImage);
    
     $.ajax({
       url:'./controller/updateItemController.php',

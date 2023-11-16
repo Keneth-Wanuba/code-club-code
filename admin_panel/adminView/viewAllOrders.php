@@ -1,61 +1,43 @@
 <div id="ordersBtn" >
-  <h2>Order Details</h2>
+  <h2>Students Assessement</h2>
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>O.N.</th>
-        <th>Customer</th>
-        <th>Contact</th>
-        <th>OrderDate</th>
-        <th>Payment Method</th>
-        <th>Order Status</th>
-        <th>Payment Status</th>
-        <th>More Details</th>
+          <th>S.N.</th>
+          <th>Student Name</th>
+          <th>Quiz Score</th>
+          <th>Project Score</th>
+          <th>Attendence</th>
+          <th>Retention</th>
+          <th>Creativity</th>
+          <th>Concentration</th>
+          <th>Applicability</th>
+          <th>Interest</th>
+          <th>Speed</th>
      </tr>
     </thead>
      <?php
       include_once "../config/dbconnect.php";
-      $sql="SELECT * from orders";
+      $sql="SELECT * from orders, product";
       $result=$conn-> query($sql);
-      
+      $count=1;
       if ($result-> num_rows > 0){
         while ($row=$result-> fetch_assoc()) {
     ?>
        <tr>
-          <td><?=$row["order_id"]?></td>
-          <td><?=$row["delivered_to"]?></td>
-          <td><?=$row["phone_no"]?></td>
-          <td><?=$row["order_date"]?></td>
-          <td><?=$row["pay_method"]?></td>
-           <?php 
-                if($row["order_status"]==0){
-                            
-            ?>
-                <td><button class="btn btn-danger" onclick="ChangeOrderStatus('<?=$row['order_id']?>')">Pending </button></td>
-            <?php
-                        
-                }else{
-            ?>
-                <td><button class="btn btn-success" onclick="ChangeOrderStatus('<?=$row['order_id']?>')">Delivered</button></td>
-        
-            <?php
-            }
-                if($row["pay_status"]==0){
-            ?>
-                <td><button class="btn btn-danger"  onclick="ChangePay('<?=$row['order_id']?>')">Unpaid</button></td>
-            <?php
-                        
-            }else if($row["pay_status"]==1){
-            ?>
-                <td><button class="btn btn-success" onclick="ChangePay('<?=$row['order_id']?>')">Paid </button></td>
-            <?php
-                }
-            ?>
-              
-        <td><a class="btn btn-primary openPopup" data-href="./adminView/viewEachOrder.php?orderID=<?=$row['order_id']?>" href="javascript:void(0);">View</a></td>
-        </tr>
+          <td><?=$count?></td>
+          <td><?=$row["student_name"]?></td>
+          <td><?=$row["quiz_score"]?></td>
+          <td><?=$row["project_score"]?></td>
+          <td><?=$row["attendence"]?></td>
+          <td><?=$row["retention"]?></td>
+          <td><?=$row["creativity"]?></td>
+          <td><?=$row["concentration"]?></td>
+          <td><?=$row["applicability"]?></td>
+          <td><?=$row["Interest"]?></td>
+          <td><?=$row["Speed"]?></td>
     <?php
-            
+         $count=$count+1;   
         }
       }
     ?>

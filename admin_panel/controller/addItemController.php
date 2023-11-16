@@ -10,20 +10,20 @@
         $category = $_POST['category'];
        
             
-        $name = $_FILES['file']['name'];
-        $temp = $_FILES['file']['tmp_name'];
+        // $name = $_FILES['file']['name'];
+        // $temp = $_FILES['file']['tmp_name'];
     
-        $location="./uploads/";
-        $image=$location.$name;
+        // $location="./uploads/";
+        // $image=$location.$name;
 
-        $target_dir="../uploads/";
-        $finalImage=$target_dir.$name;
+        // $target_dir="../uploads/";
+        // $finalImage=$target_dir.$name;
 
-        move_uploaded_file($temp,$finalImage);
+        // move_uploaded_file($temp,$finalImage);
 
          $insert = mysqli_query($conn,"INSERT INTO product
-         (student_name, std_image,level,student_desc,school_id) 
-         VALUES ('$ProductName','$image',$price,'$desc','$category')");
+         (student_name,level,student_desc,school_id) 
+         VALUES ('$ProductName',$price,'$desc','$category')");
  
          if(!$insert)
          {
