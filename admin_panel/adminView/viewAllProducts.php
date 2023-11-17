@@ -25,7 +25,7 @@
       <td><?=$row["student_name"]?></td>
       <td><?=$row["student_desc"]?></td>      
       <td><?=$row["school_name"]?></td> 
-      <td><?=$row["level"]?></td>
+      <td><?=$row["std_level"]?></td>
 
       <td><button class="btn btn-primary" style="height:40px" onclick="itemEditForm('<?=$row['student_id']?>')">Edit</button></td>
       <td><button class="btn btn-danger" style="height:40px" onclick="itemDelete('<?=$row['student_id']?>')">Delete</button></td>
@@ -53,23 +53,23 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <form  enctype='multipart/form-data' onsubmit="addItems()" method="POST">
+          <form  enctype='multipart/form-data' action="./controller/addstudentcontroller.php" method="POST">
             <div class="form-group">
-              <label for="name">Student Name:</label>
-              <input type="text" class="form-control" id="p_name" required>
+              <label for="student_name">Student Name:</label>
+              <input type="text" class="form-control" name="student_name" id="student_name" required>
             </div>
             <div class="form-group">
-              <label for="price">Level:</label>
-              <input type="number" class="form-control" id="p_price" required>
+              <label for="student_level">Level:</label>
+              <input type="number" class="form-control" name="student_level" id="student_level" required>
             </div>
             <div class="form-group">
-              <label for="qty">Description:</label>
-              <input type="text" class="form-control" id="p_desc" required>
+              <label for="student_desc">Description:</label>
+              <input type="text" class="form-control" name="student_desc" id="student_desc" required>
             </div>
             
             <div class="form-group">
-              <label>School:</label>
-              <select id="category" >
+              <label for="std_school">School:</label>
+              <select name="std_school" id="std_school">
                 <option disabled selected>Select School</option>
                 <?php
 
@@ -85,7 +85,7 @@
               </select>
             </div>
             <div class="form-group">
-              <button type="submit" class="btn-secondary" id="upload" style="height:40px">Add Student</button>
+              <button type="submit" class="btn-secondary" name="upload1" style="height:40px">Add Student</button>
             </div>
           </form>
 

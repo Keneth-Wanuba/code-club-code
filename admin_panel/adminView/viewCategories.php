@@ -4,7 +4,7 @@
   <table class="table ">
     <thead>
       <tr>
-        <th class="text-center">S.N.</th>
+        <th class="text-center">SCH ID.</th>
         <th class="text-center">School Name</th>
         <th class="text-center" colspan="2">Action</th>
       </tr>
@@ -18,7 +18,7 @@
         while ($row=$result-> fetch_assoc()) {
     ?>
     <tr>
-      <td><?=$count?></td>
+      <td>CAU_SCH<?=$row["school_id"]?></td>
       <td><?=$row["school_name"]?></td>   
       <!-- <td><button class="btn btn-primary" >Edit</button></td> -->
       <td><button class="btn btn-danger" style="height:40px" onclick="categoryDelete('<?=$row['school_id']?>')">Delete</button></td>

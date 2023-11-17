@@ -11,39 +11,52 @@
 		while($row1=mysqli_fetch_array($qry)){
       $catID=$row1["school_id"];
 ?>
-<form id="update-Items" onsubmit="updateItems()" enctype='multipart/form-data'>
+<form id="update-Items" action="controller/updateItemController.php" enctype='multipart/form-data'>
 	<div class="form-group">
-      <input type="text" class="form-control" id="student_id" value="<?=$row1['student_id']?>" hidden>
+      <input type="number" class="form-control" name="student_id" id="student_id" value="<?=$row1['student_id']?>" hidden>
     </div>
     <div class="form-group">
-      <label for="name">Student Name:</label>
-      <input type="text" class="form-control" id="p_name" value="<?=$row1['student_name']?>">
+      <label for="student_name">Student Name:</label>
+      <input type="text" class="form-control" name="student_name" id="student_name" value="<?=$row1['student_name']?>">
     </div>
     <div class="form-group">
-      <label for="desc">Student Description:</label>
-      <input type="text" class="form-control" id="p_desc" value="<?=$row1['student_desc']?>">
+      <label for="student_desc">Student Description:</label>
+      <input type="text" class="form-control" name="student_desc" id="student_desc" value="<?=$row1['student_desc']?>">
     </div>
     <div class="form-group">
-      <label for="price">Level</label>
-      <input type="number" class="form-control" id="p_price" value="<?=$row1['level']?>">
+      <label for="std_level">Level</label>
+      <input type="number" class="form-control" name="std_level" id="std_level" value="<?=$row1['std_level']?>">
     </div>
+    
     <div class="form-group">
-      <label>School:</label>
-      <select id="category">
-        <?php
-          $sql="SELECT * from category WHERE school_id='$catID'";
-          $result = $conn-> query($sql);
-          if ($result-> num_rows > 0){
-            while($row = $result-> fetch_assoc()){
-              echo"<option value='". $row['school_id'] ."'>" .$row['school_name'] ."</option>";
-            }
-          }
+              <label for="std_school">School:</label>
+              <select name="std_school" id="std_school">
+
+          <?php
+                      $sql="SELECT * from category WHERE school_id='$catID'";
+                      $result = $conn-> query($sql);
+                      if ($result-> num_rows > 0){
+                        while($row = $result-> fetch_assoc()){
+                          echo"<option disabled selected value='". $row['school_id'] ."'>" .$row['school_name'] ."</option>";
+                        }
+                      }
         ?>
 
-      </select>
-    </div>
+                <?php
+
+                  $sql="SELECT * from category";
+                  $result = $conn-> query($sql);
+
+                  if ($result-> num_rows > 0){
+                    while($row = $result-> fetch_assoc()){
+                      echo"<option value='".$row['school_id']."'>".$row['school_name'] ."</option>";
+                    }
+                  }
+                ?>
+              </select>
+            </div>
     <div class="form-group">
-      <button type="submit" style="height:40px" class="btn btn-primary">Update Student</button>
+      <button type="submit" style="height:40px" name="upload3" class="btn btn-primary">Update Student</button>
     </div>
     <?php
     		}

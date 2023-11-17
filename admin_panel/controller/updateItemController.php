@@ -1,11 +1,14 @@
 <?php
     include_once "../config/dbconnect.php";
 
-    $product_id=$_POST['product_id'];
-    $p_name= $_POST['p_name'];
-    $p_desc= $_POST['p_desc'];
-    $p_price= $_POST['p_price'];
-    $category= $_POST['category'];
+    if(isset($_POST['upload3'])){
+    
+    
+    $std_id=$_POST['student_id'];
+    $std_name= $_POST['student_name'];
+    $std_desc= $_POST['student_desc'];
+    $lvl= $_POST['std_level'];
+    $sch= $_POST['std_school'];
 
     // if( isset($_FILES['newImage']) ){
         
@@ -24,13 +27,11 @@
     // }else{
     //     $final_image=$_POST['existingImage'];
     // }
-    $updateItem = mysqli_query($conn,"UPDATE product SET 
-        student_name='$p_name', 
-        student_desc='$p_desc', 
-        level=$p_price,
-        school_id=$category,
-        -- product_image='$final_image' 
-        WHERE student_id=$product_id");
+    $updateItem = mysqli_query($conn,"UPDATE `product` SET 
+    `student_name` = '$std_name', 
+    `student_desc` = '$std_desc', 
+    `school_id` = '$sch' 
+    WHERE `product`.`student_id` = '$std_id';");
 
 
     if($updateItem)
@@ -41,4 +42,7 @@
     {
         echo mysqli_error($conn);
     }
+}else{
+    echo "bigaanye";
+}
 ?>
