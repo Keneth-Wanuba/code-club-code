@@ -56,7 +56,7 @@
               </select>
             </div>
     <div class="form-group">
-      <button type="submit" style="height:40px" name="upload3" class="btn btn-primary">Update Student</button>
+      <button type="submit" style="height:40px" name="upload3" id="upload3" class="btn btn-primary">Update Student</button>
     </div>
     <?php
     		}
