@@ -8,8 +8,8 @@
     $std_name= $_POST['student_name'];
     $std_desc= $_POST['student_desc'];
     $lvl= $_POST['std_level'];
-    $sch= $_POST['std_school'];
-
+    $sch_id = $_POST['std_school'];
+        echo $std_desc,$std_id,$std_name;
     // if( isset($_FILES['newImage']) ){
         
     //     $location="./uploads/";
@@ -30,13 +30,13 @@
     $updateItem = mysqli_query($conn,"UPDATE `product` SET 
     `student_name` = '$std_name', 
     `student_desc` = '$std_desc', 
-    `school_id` = '$sch' 
+    `school_id` = '$sch_id' 
     WHERE `product`.`student_id` = '$std_id';");
 
 
     if($updateItem)
     {
-        echo "true";
+        header("Location: ../index.php#products");
     }
     else
     {

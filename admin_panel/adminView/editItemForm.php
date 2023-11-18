@@ -11,7 +11,7 @@
 		while($row1=mysqli_fetch_array($qry)){
       $catID=$row1["school_id"];
 ?>
-<form id="update-Items" action="controller/updateItemController.php" enctype='multipart/form-data'>
+<form id="update-Items" action="controller/updateItemController.php" method="POST" enctype='multipart/form-data'>
 	<div class="form-group">
       <input type="number" class="form-control" name="student_id" id="student_id" value="<?=$row1['student_id']?>" hidden>
     </div>
@@ -27,21 +27,12 @@
       <label for="std_level">Level</label>
       <input type="number" class="form-control" name="std_level" id="std_level" value="<?=$row1['std_level']?>">
     </div>
-    
+ 
     <div class="form-group">
               <label for="std_school">School:</label>
               <select name="std_school" id="std_school">
 
-          <?php
-                      $sql="SELECT * from category WHERE school_id='$catID'";
-                      $result = $conn-> query($sql);
-                      if ($result-> num_rows > 0){
-                        while($row = $result-> fetch_assoc()){
-                          echo"<option disabled selected value='". $row['school_id'] ."'>" .$row['school_name'] ."</option>";
-                        }
-                      }
-        ?>
-
+          
                 <?php
 
                   $sql="SELECT * from category";
