@@ -2,13 +2,13 @@
 
     include_once "../config/dbconnect.php";
     
-    $p_id=$_POST['record'];
-    $query="DELETE FROM product where product_id='$p_id'";
+    $std_id=$_POST['student_id'];
+    $query="DELETE FROM product where student_id='$std_id'";
 
     $data=mysqli_query($conn,$query);
 
     if($data){
-        echo"Product Item Deleted";
+        echo"Student data Deleted";
     }
     else{
         echo"Not able to delete";

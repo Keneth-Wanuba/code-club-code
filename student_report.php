@@ -24,7 +24,7 @@
         <h1>Student Report</h1>
     </header>
 
-    <section id="student-details">
+    <section class="student_details" id="student-details">
         <!-- Include student details here -->
         <div class="profile-card">
             
@@ -34,8 +34,12 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et enim quis arcu semper tincidunt. Proin ut dolor vitae quam tincidunt luctus. Nam sed sapien et augue faucibus semper.</p>
         </div>    
         <!-- Add your content here -->
+        <div class="std_project">
+        <iframe src="https://scratch.mit.edu/projects/893197457/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>        </div>
     </section>
 
+
+    
     <section id="quiz-project">
         <!-- Include quiz and project assessment here -->
         <div class="cont">
@@ -52,7 +56,7 @@
                 <p>Final Project</p>
             </div>
             <div class="score_card">
-                <div class="pie animate no-round" style="--p:80;--c:rgb(38, 0, 255);"> 50%</div>
+                <div class="pie animate no-round" style="--p:50;--c:rgb(38, 0, 255);"> 50%</div>
              </div>
         </div>
         <!-- Add your content here -->

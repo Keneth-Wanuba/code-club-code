@@ -164,14 +164,14 @@ function updateItems(){
     });
 }
 
-//delete product data
+// delete product data
 function itemDelete(id){
     $.ajax({
-        url:"./controller/deleteItemController.php",
+        url:"controller/deleteItemController.php",
         method:"post",
-        data:{record:id},
+        data:{student_id:id},
         success:function(data){
-            alert('Items Successfully deleted');
+            alert('Student data Successfully deleted');
             $('form').trigger('reset');
             showProductItems();
         }

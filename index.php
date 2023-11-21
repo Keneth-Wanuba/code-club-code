@@ -1,3 +1,9 @@
+<?php
+include_once "./admin_panel/config/dbconnect.php";
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,22 +29,25 @@
         </nav>
     </header>
     <div class="home">
-         <form class="form">
+         <form class="form" method="post" action="">
             <h1>Generate Student Report</h1>
             <br><br><br>
             <label> Choose School: </label>
-            <select id="category">
-        <?php
-        //   $sql="SELECT * from category WHERE school_id='$catID'";
-        //   $result = $conn-> query($sql);
-        //   if ($result-> num_rows > 0){
-        //     while($row = $result-> fetch_assoc()){
-        //       echo"<option value='". $row['school_id'] ."'>" .$row['school_name'] ."</option>";
-        //     }
-        //   }
-        ?>
 
-      </select>
+            <select id="category">
+            <?php
+
+                $sql="SELECT * from category";
+                $result = $conn-> query($sql);
+
+                if ($result-> num_rows > 0){
+                while($row = $result-> fetch_assoc()){
+                    echo"<option value='".$row['school_id']."'>".$row['school_name'] ."</option>";
+                }
+                }
+                ?>
+            </select>
+
             <br><br><br>
             <label> Enter Student Name: </label>
             <input type="text" class="name"></input>

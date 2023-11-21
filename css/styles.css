@@ -126,6 +126,11 @@ section {
     padding: 20px;
 }
 
+.student_details{
+  display: flex;
+  flex-direction: row;
+}
+
 .profile-card {
     width: 300px;
     margin: 20px auto;
