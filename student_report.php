@@ -87,7 +87,7 @@ $student = $_POST['student'];
                 <p>Quiz</p>
             </div>
             <div class="score_card">
-                <div class="pie animate no-round" style="--p:<?=$row["quiz_score"]?>;--c:orange;"> <?=$row["quiz_score"]?>%</div>
+                <div class="pie animate no-round" style="--p:<?=$row["quiz_score"]?>;--c:#F79600;"> <?=$row["quiz_score"]?>%</div>
             </div>
         </div>
         <div class="cont">

@@ -41,7 +41,7 @@
             </div>
             <div class="col-sm-3">
                 <div class="card" onclick="showCategory()">
-                    <i class="fa fa-th-large mb-2" style="font-size: 70px; color: orange;"></i>
+                    <i class="fa fa-th-large mb-2" style="font-size: 70px; color: #F79600;"></i>
                     <h4 style="color:white;">Total Schools</h4>
                     <h5 style="color:white;">
                     <?php
@@ -62,7 +62,7 @@
             </div>
             <div class="col-sm-3">
             <div class="card" onclick="showProductItems()">
-                    <i class="fa fa-th mb-2" style="font-size: 70px;color: orange;"></i>
+                    <i class="fa fa-th mb-2" style="font-size: 70px;color: #F79600;"></i>
                     <h4 style="color:white;">Total Students</h4>
                     <h5 style="color:white;">
                     <?php
@@ -83,7 +83,7 @@
             </div>
             <div class="col-sm-3">
                 <div class="card" onclick="showOrders()">
-                    <i class="fa fa-list mb-2" style="font-size: 70px; color:orange"></i>
+                    <i class="fa fa-list mb-2" style="font-size: 70px; color:#F79600"></i>
                     <h4 style="color:white;">Total Assessements</h4>
                     <h5 style="color:white;">
                     <?php

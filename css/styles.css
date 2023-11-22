@@ -6,7 +6,7 @@ body {
 
 header {
     background-color: #fff;
-    color: #130372;
+    color: #0046B6;
     text-align: center;
     padding: 0px;
     display: inline;
@@ -23,8 +23,8 @@ header {
 }
 
 h1{
-    background:  rgb(16, 16, 170);
-    color: orange;
+    background:  #0046B6;
+    color: #F79600;
     padding: 18px;
 }
 
@@ -32,7 +32,7 @@ h1{
   background:none;
 }
 nav {
-    background-color: blue;
+    background-color: #0046B6;
     color: #ecf0f1;
     padding: 0px;
     text-align: center;
@@ -71,11 +71,11 @@ nav a {
 }
 
 nav a:hover{
-	color:orange;
+	color:#F79600;
 }
 
 #current a{
-	color: orange;
+	color: #F79600;
 }
 
 .home{
@@ -101,7 +101,7 @@ nav a:hover{
 .form button{
   color: #ffffff;
   padding: 15px 10px 15px 10px;
-  background-color: orange;
+  background-color: #F79600;
   border-radius: 10px;
   border: none;
   font-size: 16px;
@@ -120,7 +120,7 @@ nav a:hover{
 
 .form input.name:active, .form input.name:hover, .form input.name:focus {
   border: none;
-  border-bottom: 3px solid orange;
+  border-bottom: 3px solid #F79600;
 }
 
 
@@ -268,4 +268,5 @@ footer {
 }
 .container{
   display: block;
+  justify-content: center;
 }
