@@ -185,7 +185,7 @@ section {
 }
 .cont{
   width: 40%;
-  background: linear-gradient(to right, #0046B6, transparent);
+  background: linear-gradient(to right,  rgb(28, 28, 156), transparent);
   border-radius: 17px;
   padding: 9px;
   position: relative;
@@ -194,6 +194,13 @@ section {
   justify-content: space-between;
   padding-left: 0%;
   padding-right: 17%;
+  color: #704a10;
+  font-weight: bold;
+  padding-left: 2%;
+}
+
+.cont p{
+  color: #ff9800;
 }
 
 .marks{
@@ -204,14 +211,19 @@ section {
 }
 
 .cont_ass{
-  width: 20%;
-  background: linear-gradient(to right, grey, transparent);
+  width: 100%;
+  background: linear-gradient(to right, rgb(28, 28, 156), transparent);
   border-radius: 17px;
   padding: 9px;
   position: relative;
+  color:#704a10;
   display: flex;
   flex-direction: row;
   justify-content: space-between
+}
+.cont_ass p{
+  color: #ff9800;
+  font-weight: bold;
 }
 .score_desc p{
   padding-left: 10%;
