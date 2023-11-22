@@ -28,6 +28,9 @@ h1{
     color: #F79600;
     padding: 18px;
 }
+h2{
+  text-align: center;
+}
 
 .form h1{
   background:none;
@@ -129,6 +132,8 @@ nav a:hover{
 section {
     padding: 20px;
     justify-content: center;
+    padding-right: 17%;
+    padding-left: 17%;
 }
 
 .student_details{
