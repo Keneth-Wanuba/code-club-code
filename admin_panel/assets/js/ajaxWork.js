@@ -178,6 +178,18 @@ function itemDelete(id){
     });
 }
 
+//edit school data
+// function schoolEditForm(id){
+//     $.ajax({
+//         url:"./adminView/editSchoolForm.php",
+//         method:"post",
+//         data: {school_id: id},
+//         success:function(data){
+//             $('.allContent-section').html(data);
+//         }
+//     });
+// }
+
 
 //delete cart data
 function cartDelete(id){

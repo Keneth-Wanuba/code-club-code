@@ -19,6 +19,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
+    height: auto;
 }
 
 h1{

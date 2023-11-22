@@ -4,6 +4,7 @@
         <tr>
             <th>S.N.</th>
             <th>Student Name</th>
+            <!-- <th>School</th> -->
             <th>Quiz Score</th>
             <th>Project Score</th>
             <th>Attendence</th>
@@ -19,7 +20,7 @@
         include_once "../config/dbconnect.php";
         $ID= $_GET['orderID'];
         //echo $ID;
-        $sql="SELECT * from orders where orders.student_id=products.student_id";
+        $sql="SELECT * from orders where orders.student_id=products.student_id;
         $result=$conn-> query($sql);
         $count=1;
         if ($result-> num_rows > 0){
@@ -29,6 +30,7 @@
                 <tr>
                     <td><?=$count?></td>
                     <td><?=$row["student_id"]?></td>
+                    -- <td><?=$row["school_name"]?></td>
                     <td><?=$row["quiz_score"]?></td>
                     <td><?=$row["project_score"]?></td>
                     <td><?=$row["attendance"]?></td>

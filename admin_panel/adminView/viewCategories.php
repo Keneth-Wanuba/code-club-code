@@ -6,6 +6,8 @@
       <tr>
         <th class="text-center">SCH ID.</th>
         <th class="text-center">School Name</th>
+        <th class="text-center">Location</th>
+        <th class="text-center">No of Students</th>
         <th class="text-center" colspan="2">Action</th>
       </tr>
     </thead>
@@ -20,7 +22,26 @@
     <tr>
       <td>CAU_SCH<?=$row["school_id"]?></td>
       <td><?=$row["school_name"]?></td>   
-      <!-- <td><button class="btn btn-primary" >Edit</button></td> -->
+      <td><?=$row["location"]?></td>
+
+      <?php
+      $sid = $row["school_id"];
+      $sqlNOS = "SELECT * from product where school_id=$sid";
+      $noOfStudents = $conn-> query($sqlNOS);
+      $stdcount=0;
+      if ($noOfStudents-> num_rows > 0){
+        while ($row=$noOfStudents-> fetch_assoc()) {
+          $stdcount=$stdcount+1;
+        }}
+      ?>
+
+      <td><?=$stdcount?></td>
+      <td>
+        <form action="./adminview/editSchoolForm.php" method="post">
+            <input type="number" name="school_id" value="<?=$row['school_id']?>" hidden>
+            <button type="submit" class="btn btn-primary" style="height:40px">Edit</button>
+        </form>
+      </td>
       <td><button class="btn btn-danger" style="height:40px" onclick="categoryDelete('<?=$row['school_id']?>')">Delete</button></td>
       </tr>
       <?php
@@ -52,6 +73,14 @@
               <input type="text" class="form-control" name="c_name" required>
             </div>
             <div class="form-group">
+              <label for="c_name">Location:</label>
+              <input type="text" class="form-control" name="c_location" required>
+            </div>
+            <!-- <div class="form-group">
+              <label for="c_name">Number Of Students:</label>
+              <input type="text" class="form-control" name="c_students" required>
+            </div> -->
+            <div class="form-group">
               <button type="submit" class="btn-secondary" name="upload" style="height:40px">Add School</button>
             </div>
           </form>
@@ -64,7 +93,5 @@
       
     </div>
   </div>
-
+        
   
-</div>
-   

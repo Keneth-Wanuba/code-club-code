@@ -24,35 +24,35 @@ include_once "./admin_panel/config/dbconnect.php";
         <nav class="navigation">
            
                 <li id="current" class="menuitem"><a href="index.html">Home</a></li>
-                <li><a href="student_report.php">Generate Report</a></li>
+                <!-- <li><a href="student_report.php">Generate Report</a></li> -->
             
         </nav>
     </header>
     <div class="home">
-         <form class="form" method="post" action="">
+         <form class="form" method="post" action="student_report.php">
             <h1>Generate Student Report</h1>
             <br><br><br>
-            <label> Choose School: </label>
+            <label> Choose Student: </label>
 
-            <select id="category">
+            <select id="student" name="student">
             <?php
 
-                $sql="SELECT * from category";
+                $sql="SELECT * from product where school_id='1'";
                 $result = $conn-> query($sql);
 
                 if ($result-> num_rows > 0){
                 while($row = $result-> fetch_assoc()){
-                    echo"<option value='".$row['school_id']."'>".$row['school_name'] ."</option>";
+                    echo"<option value='".$row['student_id']."'>".$row['student_name'] ."</option>";
                 }
                 }
                 ?>
             </select>
 
-            <br><br><br>
+            <!-- <br><br><br>
             <label> Enter Student Name: </label>
-            <input type="text" class="name"></input>
+            <input type="text" class="name"></input> -->
             <br><br><br>
-            <button type="submit" name="submit">Generate</button>
+            <button type="submitStudent" name="submitStudent">generate report</button>
                         
         </form>
     </div>    

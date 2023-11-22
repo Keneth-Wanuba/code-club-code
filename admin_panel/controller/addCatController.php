@@ -5,10 +5,11 @@
     {
        
         $catname = $_POST['c_name'];
+        $catlocation = $_POST['c_location'];
        
          $insert = mysqli_query($conn,"INSERT INTO category
-         (school_name) 
-         VALUES ('$catname')");
+         (school_name,location) 
+         VALUES ('$catname',' $catlocation')");
  
          if(!$insert)
          {

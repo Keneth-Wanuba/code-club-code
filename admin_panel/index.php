@@ -40,7 +40,7 @@
                 // </div> -->
             </div>
             <div class="col-sm-3">
-                <div class="card">
+                <div class="card" onclick="showCategory()">
                     <i class="fa fa-th-large mb-2" style="font-size: 70px; color: orange;"></i>
                     <h4 style="color:white;">Total Schools</h4>
                     <h5 style="color:white;">
@@ -61,13 +61,13 @@
                 </div>
             </div>
             <div class="col-sm-3">
-            <div class="card">
+            <div class="card" onclick="showProductItems()">
                     <i class="fa fa-th mb-2" style="font-size: 70px;color: orange;"></i>
                     <h4 style="color:white;">Total Students</h4>
                     <h5 style="color:white;">
                     <?php
                        
-                       $sql="SELECT * from product";
+                       $sql="SELECT * from product, category where product.school_id=category.school_id";
                        $result=$conn-> query($sql);
                        $count=0;
                        if ($result-> num_rows > 0){
@@ -81,27 +81,27 @@
                    </h5>
                 </div>
             </div>
-            <!-- <div class="col-sm-3">
-                <div class="card">
-                    <i class="fa fa-list mb-2" style="font-size: 70px;"></i>
-                    <h4 style="color:white;">Total orders</h4>
+            <div class="col-sm-3">
+                <div class="card" onclick="showOrders()">
+                    <i class="fa fa-list mb-2" style="font-size: 70px; color:orange"></i>
+                    <h4 style="color:white;">Total Assessements</h4>
                     <h5 style="color:white;">
-                  //  <?php
+                    <?php
                        
-                //        $sql="SELECT * from orders";
-                //        $result=$conn-> query($sql);
-                //        $count=0;
-                //        if ($result-> num_rows > 0){
-                //            while ($row=$result-> fetch_assoc()) {
+                       $sql="SELECT * from orders";
+                       $result=$conn-> query($sql);
+                       $count=0;
+                       if ($result-> num_rows > 0){
+                           while ($row=$result-> fetch_assoc()) {
                    
-                //                $count=$count+1;
-                //            }
-                //        }
-                //        echo $count;
-                //    ?>
+                               $count=$count+1;
+                           }
+                       }
+                       echo $count;
+                   ?>
                    </h5>
                 </div>
-            </div> -->
+            </div>
         </div>
         
     </div>
