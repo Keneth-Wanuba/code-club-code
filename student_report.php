@@ -28,16 +28,17 @@ $student = $_POST['student'];
     <header>
         <div class="logos">
             <img src="imgs/Logos/Code Academy logo-15.png" alt="Your Logo" width="100" height="70">
-            <img src="imgs/Logos/Code Academy logo-15.png" alt="Your Logo" width="100" height="80">
+            <img src="imgs/Logos/watotologo.png" alt="Your Logo" width="100" height="80">
         </div>
-        <nav class="navigation">
+        <!-- <nav class="navigation">
            
                 <li><a href="index.php">Home</a></li>
-                <!-- <li  id="current" class="menuitem"><a href="student_report.php">Generate Report</a></li> -->
-            
-        </nav>
+                <li  id="current" class="menuitem"><a href="student_report.php">Generate Report</a></li> 
+
+        <!-- </nav> -->
         <h1>Student Report</h1>
     </header>
+    <div class="container">
     <?php
          $fetchDetails = "SELECT * from product where student_id=$student";
          $result1 = $conn-> query($fetchDetails);
@@ -174,10 +175,13 @@ $student = $_POST['student'];
         }
             ?>
         
+    
+
+    </div>
+
     <footer>
         &copy; 2023 Code Academy Uganda
     </footer>
-
 </body>
 </html>
 <?php

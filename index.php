@@ -18,8 +18,9 @@ include_once "./admin_panel/config/dbconnect.php";
 
     <header>
         <div class="logos">
-            <img src="imgs/Logos/Code Academy logo-15.png" alt="Your Logo" width="100" height="100">
-            <h>WCIS</h>
+            <img src="imgs/Logos/Code Academy logo-15.png" alt="Your Logo" width="100" height="70">
+            
+            <h> <img src="imgs/Logos/watotologo.png" alt="Your Logo" width="100" height="70"></h>
         </div>
         <nav class="navigation">
            

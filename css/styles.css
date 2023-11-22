@@ -23,7 +23,9 @@ header {
 }
 
 h1{
-    background: #81c0f7;
+    background:  rgb(16, 16, 170);
+    color: orange;
+    padding: 18px;
 }
 
 .form h1{
@@ -263,4 +265,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+.container{
+  display: block;
 }
