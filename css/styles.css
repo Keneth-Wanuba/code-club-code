@@ -134,7 +134,6 @@ section {
 .student_details{
   display: flex;
   flex-direction: row;
-  justify-content: center;
 }
 
 .profile-card {
@@ -143,7 +142,6 @@ section {
     border: 1px solid #ccc;
     padding: 20px;
     text-align: center;
-    justify-content: center;
     
 }
 
