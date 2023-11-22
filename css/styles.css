@@ -211,10 +211,10 @@ section {
 }
 
 .cont_ass{
-  width: 100%;
+  width: 90%;
   background: linear-gradient(to right, rgb(28, 28, 156), transparent);
   border-radius: 17px;
-  padding: 9px;
+  padding-right: 0%;
   position: relative;
   color:#704a10;
   display: flex;

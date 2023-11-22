@@ -95,7 +95,7 @@ $student = $_POST['student'];
                 <p>Final Project</p>
             </div>
             <div class="score_card">
-                <div class="pie animate no-round" style="--p: <?=$row["project_score"]?>;--c:rgb(38, 0, 255);">  <?=$row["project_score"]?>%</div>
+                <div class="pie animate no-round" style="--p: <?=$row["project_score"]?>;--c:#F79600;">  <?=$row["project_score"]?>%</div>
              </div>
         </div>
         <!-- Add your content here -->
@@ -111,7 +111,7 @@ $student = $_POST['student'];
                     <p>Attendence</p>
                 </div>
                 <div class="score_card">
-                    <div class="pie animate no-round" style="--p: <?=$row["attendence"]?>;--c:rgb(0, 255, 149);">  <?=$row["attendence"]?>%</div>
+                    <div class="pie animate no-round" style="--p: <?=$row["attendence"]?>;--c:#F79600;">  <?=$row["attendence"]?>%</div>
                   
                 </div>
             </div>
@@ -120,7 +120,7 @@ $student = $_POST['student'];
                     <p>Retention</p>
                 </div>
                 <div class="score_card">
-                    <div class="pie animate no-round" style="--p: <?=$row["retention"]?>;--c:rgb(255, 0, 200);">  <?=$row["retention"]?>%</div>
+                    <div class="pie animate no-round" style="--p: <?=$row["retention"]?>;--c:#F79600;">  <?=$row["retention"]?>%</div>
                   
                 </div>
             </div>
@@ -129,7 +129,7 @@ $student = $_POST['student'];
                     <p>Creativity</p>
                 </div>
                 <div class="score_card">
-                    <div class="pie animate no-round" style="--p: <?=$row["creativity"]?>;--c:rgb(0, 255, 0);">  <?=$row["creativity"]?>%</div>
+                    <div class="pie animate no-round" style="--p: <?=$row["creativity"]?>;--c:#F79600;">  <?=$row["creativity"]?>%</div>
                   
                 </div>
             </div>
@@ -138,7 +138,7 @@ $student = $_POST['student'];
                     <p>Application of knowledge</p>
                 </div>
                 <div class="score_card">
-                    <div class="pie animate no-round" style="--p: <?=$row["applicability"]?>;--c:rgb(255, 0, 76);">  <?=$row["applicability"]?>%</div>
+                    <div class="pie animate no-round" style="--p: <?=$row["applicability"]?>;--c:#F79600;">  <?=$row["applicability"]?>%</div>
                   
                 </div>
             </div>
@@ -147,7 +147,7 @@ $student = $_POST['student'];
                             <p>Concentration in class</p>
                         </div>
                         <div class="score_card">
-                            <div class="pie animate no-round" style="--p: <?=$row["concentration"]?>;--c:rgb(55, 0, 255);">  <?=$row["concentration"]?>%</div>
+                            <div class="pie animate no-round" style="--p: <?=$row["concentration"]?>;--c:#F79600;">  <?=$row["concentration"]?>%</div>
                         
                         </div>
                 </div>
@@ -156,7 +156,7 @@ $student = $_POST['student'];
                             <p>Interest in coding</p>
                         </div>
                         <div class="score_card">
-                            <div class="pie animate no-round" style="--p: <?=$row["Interest"]?>;--c:rgb(0, 255, 149);">  <?=$row["Interest"]?>%</div>
+                            <div class="pie animate no-round" style="--p: <?=$row["Interest"]?>;--c:#F79600;">  <?=$row["Interest"]?>%</div>
                           
                         </div>
                     </div>
@@ -165,7 +165,7 @@ $student = $_POST['student'];
                             <p>Speed</p>
                         </div>
                         <div class="score_card">
-                            <div class="pie animate no-round" style="--p: <?=$row["Speed"]?>;--c:rgb(0, 255, 149);">  <?=$row["Speed"]?>%</div>
+                            <div class="pie animate no-round" style="--p: <?=$row["Speed"]?>;--c:#F79600;">  <?=$row["Speed"]?>%</div>
                           
                         </div>
                     </div>
