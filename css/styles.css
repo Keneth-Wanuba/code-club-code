@@ -3,6 +3,7 @@ body {
     margin: 0px;
     padding: 0px;
     justify-content:left;
+    overflow-x: hidden;
 }
 
 header {
@@ -145,10 +146,13 @@ section {
 .profile-card {
     width: 300px;
     margin: 20px auto;
-    border: 1px solid #ccc;
+    border: 1px solid #F79600;
     padding: 20px;
     text-align: center;
     justify-self: left;
+
+
+
     
 }
 
@@ -162,6 +166,7 @@ section {
 .profile-card h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #F79600;
 }
 
 .profile-card p {
@@ -171,20 +176,24 @@ section {
 
 /* score card */
 #quiz-project{
-  width: 100%;
+  width: 70%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
+  padding-left: 17%;
+  padding-right: 17%;
 }
 .cont{
   width: 40%;
-  background: linear-gradient(to right, grey, transparent);
+  background: linear-gradient(to right, #0046B6, transparent);
   border-radius: 17px;
   padding: 9px;
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-between
+  justify-content: space-between;
+  padding-left: 0%;
+  padding-right: 17%;
 }
 
 .marks{
@@ -204,7 +213,8 @@ section {
   flex-direction: row;
   justify-content: space-between
 }
-.score_desc{
+.score_desc p{
+  padding-left: 10%;
   
 }
 
