@@ -1,9 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0px;
-    padding: 0px;
     justify-content:left;
-    overflow-x: hidden;
+    overflow-x:hidden;
+    margin: 0;
+    padding: 0;
+   
 }
 
 header {
@@ -13,6 +14,13 @@ header {
     padding: 0px;
     display: inline;
     flex-direction: column;
+   
+}
+
+header h{
+  font-weight: bolder;
+  font-size: 30px;
+  padding-top: 2%;
 
 }
 
@@ -22,7 +30,9 @@ header {
     justify-content: space-between;
     padding: 20px;
     height: auto;
+    border-radius: 50%;
 }
+
 
 h1{
     background:  #0046B6;
@@ -35,6 +45,8 @@ h2{
 
 .form h1{
   background:none;
+  text-align: left;
+  padding: 0;
 }
 nav {
     background-color: #0046B6;
@@ -42,6 +54,8 @@ nav {
     padding: 0px;
     text-align: center;
     display: flex;
+   
+
 }
 
 
@@ -101,6 +115,7 @@ nav a:hover{
   font-weight: 40px;
   background: linear-gradient(45deg, black, transparent);
   padding: 20px;
+  text-align: left;
 }
 
 .form button{
@@ -185,7 +200,7 @@ section {
 }
 .cont{
   width: 40%;
-  background: linear-gradient(to right,  rgb(28, 28, 156), transparent);
+  background: linear-gradient(to right,  rgb(12, 12, 73), transparent);
   border-radius: 17px;
   padding: 9px;
   position: relative;
@@ -212,14 +227,15 @@ section {
 
 .cont_ass{
   width: 90%;
-  background: linear-gradient(to right, rgb(28, 28, 156), transparent);
+  background: linear-gradient(to right, rgb(12, 12, 73), transparent);
   border-radius: 17px;
   padding-right: 0%;
   position: relative;
   color:#704a10;
   display: flex;
   flex-direction: row;
-  justify-content: space-between
+  justify-content: space-between;
+
 }
 .cont_ass p{
   color: #ff9800;
@@ -293,12 +309,26 @@ footer {
     background-color: #000;
     color: #ecf0f1;
     text-align: center;
-    padding: 10px;
+    padding:0px;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 .container{
-  display: block;
+  
   justify-content: center;
+}
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #0046B6;
+  color: #F79600;
+  border-radius: 5px;
+}
+
+ body .report{
+  padding-left: 17%;
+  padding-right: 17%;
 }

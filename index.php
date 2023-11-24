@@ -19,6 +19,7 @@ include_once "./admin_panel/config/dbconnect.php";
     <header>
         <div class="logos">
             <img src="imgs/Logos/Code Academy logo-15.png" alt="Your Logo" width="100" height="70">
+            <h> Watoto Christian International School</h>
             
             <h> <img src="imgs/Logos/watotologo.png" alt="Your Logo" width="100" height="70"></h>
         </div>
@@ -30,30 +31,14 @@ include_once "./admin_panel/config/dbconnect.php";
         </nav>
     </header>
     <div class="home">
-         <form class="form" method="post" action="student_report.php">
-            <h1>Generate Student Report</h1>
-            <br><br><br>
-            <label> Choose Student: </label>
-
-            <select id="student" name="student">
-            <?php
-
-                $sql="SELECT * from product where school_id='1'";
-                $result = $conn-> query($sql);
-
-                if ($result-> num_rows > 0){
-                while($row = $result-> fetch_assoc()){
-                    echo"<option value='".$row['student_id']."'>".$row['student_name'] ."</option>";
-                }
-                }
-                ?>
-            </select>
-
-            <!-- <br><br><br>
-            <label> Enter Student Name: </label>
-            <input type="text" class="name"></input> -->
-            <br><br><br>
-            <button type="submitStudent" name="submitStudent">generate report</button>
+         <form class="form" method="post" action="strpt.php">
+            <h1>Code Club</h1>
+            
+            
+            <label for="student_code">Enter Student Code:</label>
+            <input type="text" id="student_code" name="student_code" required></input>
+<br><br><br>
+            <button type="submitStudent" name="submitStudent">Generate Report</button>
                         
         </form>
     </div>    

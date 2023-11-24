@@ -1,5 +1,6 @@
 <?php
 include_once "./admin_panel/config/dbconnect.php";
+require_once('TCPDF-main/tcpdf.php');
 
 
 ?>
@@ -8,7 +9,8 @@ include_once "./admin_panel/config/dbconnect.php";
 <?php
 if(isset($_POST['submitStudent'])){
 
-$student = $_POST['student'];
+$student = $_POST['student_code'];
+$escaped_student = mysqli_real_escape_string($conn, $student);
 
 
 ?>
@@ -19,11 +21,12 @@ $student = $_POST['student'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Reports</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
 </head>
-<body>
+<body class="report">
 
     <header>
         <div class="logos">
@@ -37,11 +40,32 @@ $student = $_POST['student'];
 
         <!-- </nav> -->
         <h1>Student Report</h1>
+        <div class="download-button" onclick="downloadPDF()">Download as PDF</div>
+
+<script>
+    function downloadPDF() {
+        $.ajax({
+            type: 'POST',
+            url: 'student_report.php',
+            success: function(data) {
+                // Create a Blob from the PDF data
+                var blob = new Blob([data], { type: 'application/pdf' });
+
+                // Create a link element and trigger a click to download the PDF
+                var link = document.createElement('a');
+                link.href = window.URL.createObjectURL(blob);
+                link.download = 'student_report.pdf';
+                link.click();
+            }
+        });
+    }
+</script>
     </header>
     <div class="container">
     <?php
-         $fetchDetails = "SELECT * from product where student_id=$student";
+         $fetchDetails = "SELECT * from product where student_id=$escaped_student";
          $result1 = $conn-> query($fetchDetails);
+         
          if ($result1-> num_rows > 0){
             while ($row=$result1-> fetch_assoc()) {
                 ?>
@@ -57,6 +81,8 @@ $student = $_POST['student'];
 
                 <?php
             }
+        } else{
+            echo "no such student found in the database";
         }
         
 
@@ -65,7 +91,7 @@ $student = $_POST['student'];
    
 
     
-        $fetchMarks = "SELECT * from orders where student_id=$student";
+        $fetchMarks = "SELECT * from orders where student_id=$escaped_student";
         $result2 = $conn-> query($fetchMarks);
         if ($result2-> num_rows > 0){
             while ($row=$result2-> fetch_assoc()) {
@@ -178,6 +204,7 @@ $student = $_POST['student'];
     
 
     </div>
+    <br>  <br>   <br>   <br>   <br>  <br>
 
     <footer>
         &copy; 2023 Code Academy Uganda

@@ -67,7 +67,10 @@
           <label> Choose Student: </label>
             <select id="student" name="student">
             <?php
-                $sql="SELECT * from product";
+                $sql="SELECT product.student_id, product.student_name
+                FROM product
+                LEFT JOIN orders ON product.student_id = orders.student_id
+                WHERE orders.student_id IS NULL;";
                 $result = $conn-> query($sql);
 
                 if ($result-> num_rows > 0){

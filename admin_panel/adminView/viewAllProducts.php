@@ -21,7 +21,7 @@
         while ($row=$result-> fetch_assoc()) {
     ?>
     <tr>
-      <td><?=$count?></td>
+      <td><?=$row["student_id"]?></td>
       <td><?=$row["student_name"]?></td>
       <td><?=$row["student_desc"]?></td>      
       <td><?=$row["school_name"]?></td> 
