@@ -69,7 +69,9 @@ if (isset($_POST['submitStudent'])) {
     </header>
 
             <div class="container">
-                <?php
+               <div class="card">
+
+               <?php
                 // Fetch details
                 $fetchDetails = "SELECT * FROM product WHERE student_id = ?";
                 $result1 = executePreparedStatement($conn, $fetchDetails, [$escaped_student], "s");
@@ -86,11 +88,17 @@ if (isset($_POST['submitStudent'])) {
                                 <p>Level: <?= $row["std_level"] ?></p>
                                 <p><?= $row["student_desc"] ?></p>
                             </div>
+
+                            <div class="std_project">
+                <iframe src="https://scratch.mit.edu/projects/893197457/embed" allowtransparency="true" width="380" height="402"  frameborder="0" scrolling="no" allowfullscreen></iframe>        </div>
+               </div>
+
+
                         </section>
                         <?php
                     }
                 } else {
-                    echo "No such student found in the database";
+                    echo "Check student code and generate report again";
                 }
                 ?>
             </div>

@@ -158,21 +158,30 @@ section {
     justify-content: center;
     padding-right: 17%;
     padding-left: 17%;
+    margin: 10%;
 }
 
 .student_details{
   display: flex;
   flex-direction: row;
   justify-self: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.card{
+  padding-left: 0;
+  padding-right: 0;
 }
 
+
 .profile-card {
-    width: 300px;
+    width: 400px;
     margin: 20px auto;
     border: 1px solid #F79600;
     padding: 20px;
     text-align: center;
     justify-self: left;
+    margin: 10%;
 
 
 
