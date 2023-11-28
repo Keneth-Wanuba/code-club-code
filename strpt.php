@@ -1,6 +1,6 @@
 <?php
 include_once "./admin_panel/config/dbconnect.php";
-require_once('TCPDF-main/tcpdf.php');
+// require_once('TCPDF-main/tcpdf.php');
 
 // Function to execute prepared statements
 function executePreparedStatement($conn, $sql, $params, $types) {
@@ -43,6 +43,7 @@ if (isset($_POST['submitStudent'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Reports</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -214,6 +215,10 @@ if (isset($_POST['submitStudent'])) {
 }
                 ?>
             </section>
+            <section>
+                <input type="submit" name="create" class="btn btn-success" value="Generate PDF">
+            </section>
+
 </div>
 <br><br><br>
 
@@ -221,7 +226,7 @@ if (isset($_POST['submitStudent'])) {
         &copy; 2023 Code Academy Uganda
     </footer>
 </body>
-<script>
+<!-- <script>
     function downloadPDF() {
         $.ajax({
             type: 'POST',
@@ -238,5 +243,5 @@ if (isset($_POST['submitStudent'])) {
             }
         });
     }
-</script>
+</script> -->
 </html>
