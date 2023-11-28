@@ -14,6 +14,7 @@
           <th>Applicability</th>
           <th>Interest</th>
           <th>Speed</th>
+          <th>Project Link</th>
      </tr>
     </thead>
      <?php
@@ -36,6 +37,7 @@
           <td><?=$row["applicability"]?></td>
           <td><?=$row["Interest"]?></td>
           <td><?=$row["Speed"]?></td>
+          <td><a href="<?=$row["scratch_project"]?>"><Link:favicon>Project</Link:favicon></a></td>
     <?php
          $count=$count+1;   
         }

@@ -54,7 +54,11 @@
         </div>
         <div class="modal-body">
           <form  enctype='multipart/form-data' action="./controller/addstudentcontroller.php" method="POST">
-            <div class="form-group">
+          <div class="form-group">
+              <label for="student_code">Student Code:</label>
+              <input type="text" class="form-control" name="student_code" id="student_code" required>
+            </div>  
+          <div class="form-group">
               <label for="student_name">Student Name:</label>
               <input type="text" class="form-control" name="student_name" id="student_name" required>
             </div>

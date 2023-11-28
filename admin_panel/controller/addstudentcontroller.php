@@ -3,14 +3,14 @@
     
     if(isset($_POST['upload1']))
     {
-      
+        $student_code= $_POST['student_code'];
         $studentname = $_POST['student_name'];
         $std_desc= $_POST['student_desc'];
         $level = $_POST['student_level'];
         $sch_id = $_POST['std_school'];
          $insert1 = mysqli_query($conn,"INSERT INTO product
-         (student_name,student_desc,school_id,std_level) 
-         VALUES ('$studentname','$std_desc','$sch_id','$level')");
+         (student_id,student_name,student_desc,school_id,std_level) 
+         VALUES ('$student_code','$studentname','$std_desc','$sch_id','$level')");
  
          if(!$insert1)
          {
