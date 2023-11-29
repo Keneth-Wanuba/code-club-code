@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2023 at 11:10 AM
+-- Generation Time: Nov 29, 2023 at 02:51 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -54,7 +54,8 @@ INSERT INTO `category` (`school_id`, `school_name`, `location`) VALUES
 
 CREATE TABLE `orders` (
   `assessment_id` int(11) NOT NULL,
-  `student_id` int(11) NOT NULL,
+  `student_id` varchar(50) NOT NULL,
+  `scratch_project` varchar(2000) NOT NULL,
   `quiz_score` int(150) NOT NULL,
   `project_score` int(10) NOT NULL,
   `attendence` int(255) NOT NULL,
@@ -70,10 +71,27 @@ CREATE TABLE `orders` (
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`assessment_id`, `student_id`, `quiz_score`, `project_score`, `attendence`, `creativity`, `retention`, `applicability`, `concentration`, `Interest`, `Speed`) VALUES
-(5, 20, 40, 60, 80, 50, 60, 50, 100, 100, 40),
-(6, 21, 60, 60, 100, 75, 70, 60, 60, 100, 80),
-(7, 8, 50, 60, 80, 50, 60, 90, 100, 100, 40);
+INSERT INTO `orders` (`assessment_id`, `student_id`, `scratch_project`, `quiz_score`, `project_score`, `attendence`, `creativity`, `retention`, `applicability`, `concentration`, `Interest`, `Speed`) VALUES
+(0, 'CC013bianca', 'https://scratch.mit.edu/projects/921801419', 60, 75, 88, 80, 70, 68, 75, 100, 88),
+(1, 'CC001claver', 'https://scratch.mit.edu/projects/929326606', 60, 78, 88, 60, 80, 75, 85, 100, 50),
+(2, 'CC002elcaris', 'https://scratch.mit.edu/projects/929328477', 60, 75, 88, 90, 78, 78, 80, 100, 80),
+(3, 'CC003chloe', 'https://scratch.mit.edu/projects/918019429', 50, 74, 88, 85, 90, 80, 80, 100, 80),
+(4, 'CC004ariel', 'https://scratch.mit.edu/projects/921801419', 90, 65, 75, 80, 95, 85, 60, 100, 80),
+(5, 'CC005mendel', 'https://scratch.mit.edu/projects/929319447', 50, 72, 100, 80, 90, 80, 60, 100, 80),
+(6, 'CC006brayden', 'https://scratch.mit.edu/projects/929326916', 60, 70, 100, 65, 70, 70, 76, 100, 70),
+(7, 'CC007adams', 'https://scratch.mit.edu/projects/921801419', 50, 65, 100, 50, 70, 60, 80, 100, 60),
+(8, 'CC008phillip', 'https://scratch.mit.edu/projects/910445853', 50, 65, 75, 50, 60, 60, 50, 100, 70),
+(9, 'CC009gabriella', 'https://scratch.mit.edu/projects/929342897', 90, 80, 75, 85, 90, 88, 98, 100, 60),
+(10, 'CC010raya', 'https://scratch.mit.edu/projects/918017211', 70, 78, 75, 76, 75, 70, 84, 100, 75),
+(11, 'CC011lyza', 'https://scratch.mit.edu/projects/920429968', 90, 80, 88, 80, 80, 75, 80, 100, 75),
+(14, 'CC014emma', 'https://scratch.mit.edu/projects/924334212', 50, 70, 100, 70, 60, 75, 80, 100, 80),
+(15, 'CC015hank', 'https://scratch.mit.edu/projects/924319550', 50, 70, 100, 65, 75, 74, 60, 100, 80),
+(16, 'CC016hansel', 'https://scratch.mit.edu/projects/928051341', 85, 70, 63, 90, 40, 70, 72, 100, 80),
+(17, 'CC012hayil', '', 85, 0, 88, 95, 90, 80, 100, 100, 100),
+(18, 'CC017isabel', '', 50, 0, 50, 50, 40, 65, 90, 75, 90),
+(19, 'CC018jasmine', 'https://scratch.mit.edu/projects/927569899', 65, 98, 100, 95, 90, 90, 95, 100, 100),
+(20, 'CC019joseph', '', 65, 0, 88, 70, 70, 68, 50, 100, 80),
+(21, 'CC020levi', '', 65, 0, 88, 95, 85, 90, 95, 100, 100);
 
 -- --------------------------------------------------------
 
@@ -82,7 +100,7 @@ INSERT INTO `orders` (`assessment_id`, `student_id`, `quiz_score`, `project_scor
 --
 
 CREATE TABLE `product` (
-  `student_id` int(11) NOT NULL,
+  `student_id` varchar(50) NOT NULL,
   `student_name` varchar(200) NOT NULL,
   `student_desc` text NOT NULL,
   `school_id` int(11) NOT NULL,
@@ -94,9 +112,30 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`student_id`, `student_name`, `student_desc`, `school_id`, `std_level`) VALUES
-(8, 'Neema Gabriella ', 'young lady ...Very disciplined and focused, Bright and able. Simple and elegant.', 1, 1),
-(20, 'Claver the young', 'Youngest coder...My best friend, Queit, disciplined, interested, quite slow but sure, and very potential. youngest i club', 1, 1),
-(21, 'Gary', 'very playful, game lover, interactive', 1, 2);
+('CC001claver', 'Claver Kayonde', 'Username: Claver_256\r\nPassword: Claver@Code', 1, 1),
+('CC002elcaris', 'Eclaris Baraka Olet', 'Username: ELCARIS_OLET\r\nPasssword: Olet@code', 1, 1),
+('CC003chloe', 'Chloe Heavenz  Atukula', 'Username: Chloe_256\r\nPassword: Chloe@Code', 1, 1),
+('CC004ariel', 'Ariel  Doron  Ewalu  ', 'Username: Ariel_256\r\nPassword: Ariel@Code', 1, 1),
+('CC005mendel', 'Mendel Nigel Ijuka Jessei Junior', 'Username: Mendel_256\r\nPassword: Mendel@Code', 1, 1),
+('CC006brayden', 'Brayden  Adoa', 'Username: Brayden_256\r\nPassword: Brayden@Code', 1, 1),
+('CC007adams', 'Adams James Kbenge', 'Username: adamsjames\r\nPassword: Adams@code', 1, 1),
+('CC008phillip', ' Phillip  Malaagla', 'Username: Phillip_256\r\nPassword: Phillip@Code', 1, 1),
+('CC009gabriella', 'Gabriella ', 'Username: Gabriella_Neema\r\nPassword: Neema@code', 1, 1),
+('CC010raya', 'Alitza Raya Esaete Odomel', 'Username: Raya_256\r\nPassword: Raya@Code', 1, 1),
+('CC011lyza', 'Lyza', 'Username: Lyza_256\r\nPassword: Lyza@Code', 1, 1),
+('CC012hayil', 'Hayil Rukundo Rwotlonyo', 'Username:\r\nPassword:', 1, 2),
+('CC013bianca', 'Bianca Mulondo', 'Username: Biancamulondo \r\nPassword: Bianca89', 1, 2),
+('CC014emma', 'Emmanuel Promise Ogenrwot\r\n\r\n', 'Username: Emmanuel_256\r\nPassword: Emma@Code', 1, 2),
+('CC015hank', 'Hank Manzi Rwotlonyo', 'Username: HMR201203\r\nPassword: 246ABC', 1, 2),
+('CC016hansel', 'Hansel Elijah ', 'Username: Hansel_256\r\nPassword: Hansel@Code', 1, 2),
+('CC017isabel', 'Isabel Nambale    ', 'Username:\r\nPassword:', 1, 2),
+('CC018jasmine', 'Jasmine Kemigisa', 'Username: CandyJemma\r\nPassword: JKM1711', 1, 2),
+('CC019joseph', 'Joseph Tendo Muluya', '', 1, 2),
+('CC020levi', 'Levi Mbaaro', 'Username:\r\nPassword:', 1, 2),
+('CC021lucas', 'Lucas Clement Luyuyo', 'Username:\r\nPassword:', 1, 2),
+('CC022gary', 'Gary', 'Username: Gary_256\r\nPassword: Gary@code', 1, 2),
+('CC023eleanor', 'Eleanor', 'Username: Eleanor_256\r\nPassword: Eleanor@Code', 1, 1),
+('CC024keron', 'Keron Wakari Waboma', 'Username: Keron_Wakari_Waboma\r\nPassword: Keron@code', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -168,13 +207,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `assessment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `product`
---
-ALTER TABLE `product`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `assessment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `users`
