@@ -252,6 +252,12 @@ section {
 .cont p{
   color: #ff9800;
 }
+.crad{
+  background-color: #fff;
+  border: #c9bdbd 1px solid;
+  padding: 5%;
+  border-radius: 5px;
+}
 
 .marks{
   width: 100%;

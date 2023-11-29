@@ -56,7 +56,7 @@ if (isset($_POST['submitStudent'])) {
         <div class="logos">
             <img src="imgs/Logos/Code Academy logo-15.png" alt="Your Logo" width="100" height="70">
             <h> Watoto Christian International School</h>
-            <img src="imgs/Logos/watotologo.png" alt="Your Logo" width="100" height="80">
+            <img src="imgs/Logos/watotologo2.png" alt="Your Logo" width="100" height="80">
         </div>
         <!-- <nav class="navigation">
            
@@ -91,8 +91,8 @@ if (isset($_POST['submitStudent'])) {
                             </div>
 
                             <div class="std_project">
-                                <iframe src="<?=$row["student_project"]?>/embed" allowtransparency="true" width="380" height="402"  frameborder="0" scrolling="no" allowfullscreen></iframe>        </div>
-                            </div>
+                <iframe src="https://scratch.mit.edu/projects/893197457/embed" allowtransparency="true" width="380" height="402"  frameborder="0" scrolling="no" allowfullscreen></iframe>        </div>
+               </div>
 
 
                         </section>
@@ -140,8 +140,8 @@ if (isset($_POST['submitStudent'])) {
     color: #F79600;
     padding: 18px; margin-bottom:5%; margin-top:3%;  margin-left:0;  margin-right:0">Class Assessment</h2>
                <!-- Add your content here -->
-           <div class="crad">
-           <div class="marks">
+             <div class="crad">
+             <div class="marks">
                     <div class="cont_ass">
                         <div class="score_desc">
                             <p>Attendence</p>
@@ -176,8 +176,8 @@ if (isset($_POST['submitStudent'])) {
                         <div class="score_card">
                             <div class="pie animate no-round" style="--p: <?=$row["applicability"]?>;--c:#F79600;">  <?=$row["applicability"]?>%</div>
                         
-                        </div> -->
-                    <!-- </div> -->
+                        </div>
+                    </div> -->
                             <div class="cont_ass">
                             <div class="score_desc">
                                 <p>Concentration in class</p>
@@ -206,12 +206,12 @@ if (isset($_POST['submitStudent'])) {
                         </div>
                     </div>
             </div>
-           </div>
     
+             </div>
                         <?php
                     }
                 } else {
-                    echo "No assessment data found for the student";
+                    echo "No quiz and project assessment data found for the student";
                 }
                 
     // Close the connection
