@@ -136,9 +136,12 @@ if (isset($_POST['submitStudent'])) {
 
             <section id="class-assessment">
                  <!-- Include class assessment here -->
-             <h2>Class Assessment</h2>
+             <h2 style=" background:  #0046B6;
+    color: #F79600;
+    padding: 18px; margin-bottom:5%; margin-top:3%;  margin-left:0;  margin-right:0">Class Assessment</h2>
                <!-- Add your content here -->
-              <div class="marks">
+           <div class="crad">
+           <div class="marks">
                     <div class="cont_ass">
                         <div class="score_desc">
                             <p>Attendence</p>
@@ -166,15 +169,15 @@ if (isset($_POST['submitStudent'])) {
                         
                         </div>
                     </div>
-                    <div class="cont_ass">
+                    <!-- <div class="cont_ass">
                         <div class="score_desc">
                             <p>Application of knowledge</p>
                         </div>
                         <div class="score_card">
                             <div class="pie animate no-round" style="--p: <?=$row["applicability"]?>;--c:#F79600;">  <?=$row["applicability"]?>%</div>
                         
-                        </div>
-                    </div>
+                        </div> -->
+                    <!-- </div> -->
                             <div class="cont_ass">
                             <div class="score_desc">
                                 <p>Concentration in class</p>
@@ -203,11 +206,12 @@ if (isset($_POST['submitStudent'])) {
                         </div>
                     </div>
             </div>
+           </div>
     
                         <?php
                     }
                 } else {
-                    echo "No quiz and project assessment data found for the student";
+                    echo "No assessment data found for the student";
                 }
                 
     // Close the connection
@@ -215,9 +219,9 @@ if (isset($_POST['submitStudent'])) {
 }
                 ?>
             </section>
-            <section>
+            <!-- <section>
                 <input type="submit" name="create" class="btn btn-success" value="Generate PDF">
-            </section>
+            </section> -->
 
 </div>
 <br><br><br>

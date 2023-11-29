@@ -52,6 +52,8 @@ h1{
 }
 h2{
   text-align: center;
+
+ 
 }
 
 .form h1{
@@ -154,34 +156,39 @@ nav a:hover{
 
 
 section {
-    padding: 20px;
+    padding: 5%;
     justify-content: center;
-    padding-right: 17%;
-    padding-left: 17%;
-    margin: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
+    /* margin: 10%; */
 }
 
 .student_details{
   display: flex;
   flex-direction: row;
-  justify-self: center;
-  padding-left: 10%;
-  padding-right: 10%;
+  margin-top: 2%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .card{
-  padding-left: 0;
-  padding-right: 0;
+ 
+  margin: 2%;
+  padding: 2%;
 }
 
 
 .profile-card {
-    width: 400px;
-    margin: 20px auto;
+    width: 600px;
     border: 1px solid #F79600;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     justify-self: left;
-    margin: 10%;
+    margin-right: 10%;
+    height: 340px;
+    padding-top: 7%;
+    padding-bottom: 7%;
 
 
 
@@ -209,27 +216,37 @@ section {
 
 /* score card */
 #quiz-project{
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding-left: 17%;
-  padding-right: 17%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  padding: 0;
+  /* padding-left: 7%; 
+  padding-right: 7%;  */
+}
+
+#class-assessment{
+  margin:0;
+  padding: 0;
 }
 .cont{
   width: 40%;
   background: linear-gradient(to right,  rgb(12, 12, 73), transparent);
   border-radius: 17px;
-  padding: 9px;
-  position: relative;
+  margin: 0;
+  
+  /* position: relative; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 0%;
-  padding-right: 17%;
-  color: #704a10;
+  /* padding-right: 17%;*/
+  color: #704a10; 
   font-weight: bold;
-  padding-left: 2%;
+  /* padding-left: 2%; */
 }
 
 .cont p{
@@ -240,14 +257,14 @@ section {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Creates three columns with equal width */
-  gap: 20px;
+  gap: 30px;
 }
 
 .cont_ass{
   width: 90%;
   background: linear-gradient(to right, rgb(12, 12, 73), transparent);
   border-radius: 17px;
-  padding-right: 0%;
+  /* padding-right: 0%; */
   position: relative;
   color:#704a10;
   display: flex;
@@ -260,7 +277,8 @@ section {
   font-weight: bold;
 }
 .score_desc p{
-  padding-left: 10%;
+  padding-left: 12%;
+  padding-top: 12%;
   
 }
 

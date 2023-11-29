@@ -195,8 +195,7 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding-left: 17%;
-  padding-right: 17%;
+ padding: 0;
 }
 .cont{
   width: 40%;
