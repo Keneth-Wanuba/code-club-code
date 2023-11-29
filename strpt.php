@@ -117,7 +117,7 @@ if (isset($_POST['submitStudent'])) {
                         <!-- Quiz and project assessment here -->
                         <div class="cont">
                             <div class="score_desc">
-                                <p>Quiz</p>
+                                <p style="padding:10px;"> Quiz</p>
                             </div>
                             <div class="score_card">
                                 <div class="pie animate no-round" style="--p:<?= $row["quiz_score"] ?>;--c:#F79600;"><?= $row["quiz_score"] ?>%</div>
