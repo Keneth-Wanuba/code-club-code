@@ -58,6 +58,12 @@ if (isset($_POST['submitStudent'])) {
             <h> Watoto Christian International School</h>
             <img src="imgs/Logos/watotologo2.png" alt="Your Logo" width="100" height="80">
         </div>
+
+        
+        <a href="index.php" class="back-arrow">&#8592;</a>
+    
+        <!-- Add more navigation links as needed -->
+    
         <!-- <nav class="navigation">
            
                 <li><a href="index.php">Home</a></li>
@@ -68,6 +74,7 @@ if (isset($_POST['submitStudent'])) {
         <h1>Student Report</h1>
         <!-- <div class="download-button" onclick="downloadPDF()">Download as PDF</div> -->
     </header>
+    <br><br>
 
             <div class="container">
                <div class="card">

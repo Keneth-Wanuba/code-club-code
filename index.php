@@ -25,7 +25,7 @@ include_once "./admin_panel/config/dbconnect.php";
         </div>
         <nav class="navigation">
            
-                <li id="current" class="menuitem"><a href="index.html">Home</a></li>
+                <li id="current" class="menuitem"><a href="index.php"></a></li>
                 <!-- <li><a href="student_report.php">Generate Report</a></li> -->
             
         </nav>

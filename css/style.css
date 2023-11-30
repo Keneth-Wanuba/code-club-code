@@ -10,16 +10,6 @@ body{
     
 
 }
-/* 
-body {
-    font-family: Arial, sans-serif;
-    justify-content:left;
-    overflow-x:hidden;
-    margin: 0;
-    padding: 0;
-   
-} */
-
 header {
     background-color: #fff;
     color: #0046B6;
@@ -31,7 +21,7 @@ header {
 }
 header h{
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 50px;
   padding-top: 2%;
 
 }
@@ -107,6 +97,21 @@ nav a:hover{
 #current a{
 	color: #F79600;
 }
+
+.back-arrow {
+  color: #F79600;
+  text-decoration: none;
+  /* padding: 10px 20px; */
+  display: inline-block;
+  background-color: azure;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* .back-arrow:hover {
+  background-color: #45a049;
+} */
 
 .home{
   /* background-image: url(../imgs/Logos/IMG_9041.JPG); */
