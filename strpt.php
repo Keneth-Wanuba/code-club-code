@@ -97,22 +97,12 @@ if (isset($_POST['submitStudent'])) {
                                 <p>Level: <?= $row["std_level"] ?></p>
                                 <p><?= $row["student_desc"] ?></p>
                             </div>
-
-                            <div class="std_project">
-                <iframe src="<?= $row["scratch_project"] ?>/embed" allowtransparency="true" width="380" height="402"  frameborder="0" scrolling="no" allowfullscreen></iframe>        </div>
-               </div>
-
-
-                        </section>
-                        <?php
+                            <?php
                     }
                 } else {
                     echo "Check student code and generate report again";
                 }
                 ?>
-            </div>
-
-            <section id="quiz-project">
                 <?php
                     // Fetch marks
                     $fetchMarks = "SELECT * FROM orders WHERE student_id = ?";
@@ -122,6 +112,16 @@ if (isset($_POST['submitStudent'])) {
                         while ($row = $result2->fetch_assoc()) {
                             // Display student marks here
                         ?>
+
+                            <div class="std_project">
+                <iframe src="<?= $row["scratch_project"] ?>/embed" allowtransparency="true" width="380" height="402"  frameborder="0" scrolling="no" allowfullscreen></iframe>        </div>
+               </div>
+
+
+                        </section>
+            </div>
+
+            <section id="quiz-project">
                         <!-- Quiz and project assessment here -->
                         <div class="cont">
                             <div class="score_desc">
