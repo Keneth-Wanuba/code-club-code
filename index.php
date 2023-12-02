@@ -21,12 +21,12 @@ include_once "./admin_panel/config/dbconnect.php";
             <img src="imgs/Logos/Code Academy logo-15.png" alt="Your Logo" width="100" height="70">
             <h> Watoto Christian International School</h>
             
-            <h> <img src="imgs/Logos/watotologo2.png" alt="Your Logo" width="100" height="70"></h>
+            <img src="imgs/Logos/watotologo2.png" alt="Your Logo" width="100" height="70">
         </div>
         <nav class="navigation">
            
                 <li id="current" class="menuitem"><a href="index.php"></a></li>
-                <!-- <li><a href="student_report.php">Generate Report</a></li> -->
+                <li><a href="#">Empowering The Next Generation Of Digital Creators</a></li>
             
         </nav>
     </header>

@@ -11,7 +11,7 @@ header {
     background-color: #fff;
     color: #0046B6;
     text-align: center;
-    padding: 0px;
+    padding: 0;
     display: inline;
     flex-direction: column;
    
@@ -20,7 +20,8 @@ header {
 header h{
   font-weight: bolder;
   font-size: 50px;
-  padding-top: 2%;
+  padding: 0;
+  /* padding-top: 1%; */
 
 }
 
@@ -50,7 +51,7 @@ h2{
 }
 nav {
     background-color: #0046B6;
-    color: #ecf0f1;
+    color: #F79600;
     padding: 0px;
     text-align: center;
     display: flex;
@@ -75,27 +76,27 @@ nav li {
 }
 
 nav a {
-	float: right;
+	/* float: right; */
 	height: 36px;
 	display: block;
 	text-align: center;
 	text-decoration: none;
-	color: #ffffff;
+	color: #F79600;
 	font-weight: bold;
 	padding-top: 18px;
-	font-size: 15px;
+	font-size: 30px;
 	padding-left:13px;
 	padding-right:13px;
 	
 }
 
-nav a:hover{
-	color:#F79600;
+/* nav a:hover{
+	color:#ecb767;
 }
 
 #current a{
 	color: #F79600;
-}
+} */
 
 .home{
   /* background-image: url(../imgs/Logos/IMG_9041.JPG); */
