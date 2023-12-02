@@ -99,7 +99,7 @@ if (isset($_POST['submitStudent'])) {
                             </div>
 
                             <div class="std_project">
-                <iframe src="https://scratch.mit.edu/projects/893197457/embed" allowtransparency="true" width="380" height="402"  frameborder="0" scrolling="no" allowfullscreen></iframe>        </div>
+                <iframe src="<?= $row["scratch_project"] ?>/embed" allowtransparency="true" width="380" height="402"  frameborder="0" scrolling="no" allowfullscreen></iframe>        </div>
                </div>
 
 
