@@ -55,8 +55,8 @@ if (isset($_POST['submitStudent'])) {
     <header>
         <div class="logos">
             <img src="imgs/Logos/Code Academy logo-15.png" alt="Your Logo" width="100" height="70">
-            <h class="school"> Watoto Christian International School</h>
-            <img src="imgs/Logos/watotologo2.png" alt="Your Logo" width="100" height="80">
+            <h class="school"> Code Academy Uganda</h>
+            <p>+256 774802292  +256 757612154</p>
         </div>
 
         
@@ -125,7 +125,7 @@ if (isset($_POST['submitStudent'])) {
                         <!-- Quiz and project assessment here -->
                         <div class="cont">
                             <div class="score_desc">
-                                <p style="padding:10px;"> Quiz</p>
+                                <p style="padding:10px;"> Quiz Average</p>
                             </div>
                             <div class="score_card">
                                 <div class="pie animate no-round" style="--p:<?= $row["quiz_score"] ?>;--c:#F79600;"><?= $row["quiz_score"] ?>%</div>
@@ -146,13 +146,13 @@ if (isset($_POST['submitStudent'])) {
                  <!-- Include class assessment here -->
              <h2 style=" background:  #0046B6;
     color: #F79600;
-    padding: 18px; margin-bottom:5%; margin-top:3%;  margin-left:0;  margin-right:0">Class Assessment</h2>
+    padding: 18px; margin-bottom:5%; margin-top:3%;  margin-left:0;  margin-right:0">Quiz Assessment</h2>
                <!-- Add your content here -->
              <div class="crad">
              <div class="marks">
                     <div class="cont_ass">
                         <div class="score_desc">
-                            <p>Attendence</p>
+                            <p>Loops</p>
                         </div>
                         <div class="score_card">
                             <div class="pie animate no-round" style="--p: <?=$row["attendence"]?>;--c:#F79600;">  <?=$row["attendence"]?>%</div>
@@ -161,7 +161,7 @@ if (isset($_POST['submitStudent'])) {
                     </div>
                     <div class="cont_ass">
                         <div class="score_desc">
-                            <p>Retention</p>
+                            <p> Variables</p>
                         </div>
                         <div class="score_card">
                             <div class="pie animate no-round" style="--p: <?=$row["retention"]?>;--c:#F79600;">  <?=$row["retention"]?>%</div>
@@ -170,7 +170,7 @@ if (isset($_POST['submitStudent'])) {
                     </div>
                     <div class="cont_ass">
                         <div class="score_desc">
-                            <p>Creativity</p>
+                            <p>Arithmetic Operators</p>
                         </div>
                         <div class="score_card">
                             <div class="pie animate no-round" style="--p: <?=$row["creativity"]?>;--c:#F79600;">  <?=$row["creativity"]?>%</div>
@@ -188,7 +188,7 @@ if (isset($_POST['submitStudent'])) {
                     </div> -->
                             <div class="cont_ass">
                             <div class="score_desc">
-                                <p>Concentration in class</p>
+                                <p>Scenes</p>
                             </div>
                             <div class="score_card">
                                 <div class="pie animate no-round" style="--p: <?=$row["concentration"]?>;--c:#F79600;">  <?=$row["concentration"]?>%</div>
@@ -197,7 +197,7 @@ if (isset($_POST['submitStudent'])) {
                     </div>
                     <div class="cont_ass">
                         <div class="score_desc">
-                            <p>Interest in coding</p>
+                            <p>Cordinates</p>
                         </div>
                         <div class="score_card">
                             <div class="pie animate no-round" style="--p: <?=$row["Interest"]?>;--c:#F79600;">  <?=$row["Interest"]?>%</div>
@@ -206,7 +206,7 @@ if (isset($_POST['submitStudent'])) {
                     </div>
                     <div class="cont_ass">
                         <div class="score_desc">
-                            <p>Speed</p>
+                            <p>Class Quiz</p>
                         </div>
                         <div class="score_card">
                             <div class="pie animate no-round" style="--p: <?=$row["Speed"]?>;--c:#F79600;">  <?=$row["Speed"]?>%</div>

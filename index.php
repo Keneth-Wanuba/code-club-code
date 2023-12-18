@@ -19,20 +19,21 @@ include_once "./admin_panel/config/dbconnect.php";
     <header>
         <div class="logos">
             <img src="imgs/Logos/Code Academy logo-15.png" alt="Your Logo" width="100" height="70">
-            <h> Watoto Christian International School</h>
-            
-            <img src="imgs/Logos/watotologo2.png" alt="Your Logo" width="100" height="70">
+            <h> Code Academy Uganda</h>
+            <!-- <p>Edward-Mugalu Road,Mpererwe, Kampala</p> -->
+            <br>
+            <p>+256 774802292  +256 757612154</p>
         </div>
         <nav class="navigation">
            
                 <li id="current" class="menuitem"><a href="index.php"></a></li>
-                <li><a href="#">Empowering The Next Generation Of Digital Creators</a></li>
+                <li ><a href="#">Empowering The Next Generation Of Digital Creators</a></li>
             
         </nav>
     </header>
     <div class="home">
          <form class="form" method="post" action="strpt.php">
-            <h1>Code Club</h1>
+            <h1>Code Camp</h1>
             
             
             <label for="student_code">Enter Student Code:</label>

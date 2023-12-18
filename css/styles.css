@@ -20,8 +20,10 @@ header {
 header h{
   font-weight: bolder;
   font-size: 50px;
-  padding: 0;
-  /* padding-top: 1%; */
+  padding-right: 0%;
+  text-align: center;
+  padding-top: 1%;
+  padding-left: 15%;
 
 }
 
@@ -33,12 +35,16 @@ header h{
     height: auto;
     border-radius: 50%;
 }
+header p{
+  display: block;
+}
 
 
 h1{
     background:  #0046B6;
     color: #F79600;
     padding: 18px;
+    text-align: center;
 }
 h2{
   text-align: center;
@@ -71,9 +77,16 @@ nav ul {
 nav li {
 	list-style: none;
 	padding: 0px;	
-	display: inline; 
+	/* display: inline;  */
+  text-align: center;
+  padding-bottom: 1%;
+  padding-left: 5%;
+  padding-right: 10%;
+
 	
 }
+
+
 
 nav a {
 	/* float: right; */

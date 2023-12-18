@@ -14,7 +14,7 @@ header {
     background-color: #fff;
     color: #0046B6;
     text-align: center;
-    padding: 0px;
+    /* padding: 0px; */
     display: inline;
     flex-direction: column;
    
@@ -22,7 +22,8 @@ header {
 header h{
   font-weight: bolder;
   font-size: 30px;
-  padding-top: 2%;
+  padding-top: 1%;
+  padding-bottom: 0%;
 
 }
 
@@ -30,7 +31,7 @@ header h{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px;
+    padding-bottom: 5%;
     height: auto;
     border-radius: 50%;
 }
@@ -52,7 +53,7 @@ h2{
 nav {
     background-color: #0046B6;
     color: #ecf0f1;
-    padding: 0px;
+    /* padding: 0px; */
     text-align: center;
     display: flex;
    
@@ -378,4 +379,11 @@ footer {
 
  body .report{
   background-color: azure;
+}
+ 
+@media screen and (max-width: 600px)
+{
+  h{
+    font-size: 10px;
+  }
 }
